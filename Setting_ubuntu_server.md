@@ -11,22 +11,25 @@ You may use "[Rufus](https://rufus.ie/ko/)", a utility that helps format and cre
 
 ## Managing Users
 
-Using following code and follow directions
+#### Using following code and follow directions
 ```
 sudo adduser {user_name}
 ```
+* Assign and confirm a password for the new user
+* Enter any additional information about the user
 
-If you want to give a user "sudo" authentication
+
+#### If you want to give a user "sudo" authentication
 ```
 usermod -aG sudo {user_name}
 ```
 
-If you want to delete a user
+#### If you want to delete a user
 ```
 sudo userdel {user_name}
 ```
 
-If you want to change user password
+#### If you want to change user password
 ```
 sudo passwd {user_name}
 ```

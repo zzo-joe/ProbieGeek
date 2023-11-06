@@ -1,7 +1,7 @@
-# Ethernet set-up 
+# Ethernet set-up  
 
 ### Identify ethernet interfaces  
-[Tip](https://ubuntu.com/server/docs/network-configuration)
+You may use some [Tip](https://ubuntu.com/server/docs/network-configuration)
 
   * Using command "ip"
   ```
@@ -35,7 +35,6 @@
         set-name: eth_lan0
   ```
 
-
 ### IP addressing  
 > Requires ***sudo previlage*** when editting or applying network configuration changes
 * DHCP setting  
@@ -67,7 +66,7 @@ sudo netplan apply
 ```  
 
 # SSH service configuration 
-[tip](https://smoh.tistory.com/m/337)  
+You may use [tip](https://smoh.tistory.com/m/337)  
 > Requires ***sudo previlage*** when editting or applying changes in ssh service
 * The Secure Shell (SSH) protocol is a method for securely sending commands to a computer over an unsecured network. SSH uses cryptography to authenticate and encrypt connections between devices.
 Explaination credit: [Cloudflare](https://www.cloudflare.com/ko-kr/learning/access-management/what-is-ssh/)  
@@ -87,31 +86,8 @@ __YOU SHOULD APPLY ABOVE CHANGES BY FOLLOWING CODE__
 sudo service sshd restart
 ```  
 
-# Connecting Synology NAS to your server 
-[tip](https://saywebsolutions.com/blog/mounting_synology_nas_shared_folder_nfs_ubuntu_16_10)  
 
-### Settings should be done in Synology NAS for further connection.  
-* See [How to access files on Synology NAS within the local network (NFS)](https://kb.synology.com/en-ca/DSM/tutorial/How_to_access_files_on_Synology_NAS_within_the_local_network_NFS)
-    > *Go to Control Panel > File Services > NFS (for DSM 7.0 and above)  
-    > *Enable NFS services  
-    > *Go to Control Panel > Shared Folder  
-    > *Select the shared folder that you want to access with your NFS client and click Edit.
-    > *Go to NFS Permissions and click Create.
-    > *Add client (IP address of your server) and save
-
-
-### Packages should be installed in your server
+### Apply sudo previlage to a user
 ```
-sudo apt install nfs-common
-```
-### Connect NAS to server
-
-```
-# You should be aware of IP address of both your server and NAS
-sudo mount {NAS_IP_address}:{Volume_you_want_to_connect} {Location_you_want_to_connect} nfs
-
-# Add NFS settings using your favorite text editor
-sudo nano /etc/fstab
-
-{NAS_IP_address}:{Volume_you_want_to_connect} {Location_you_want_to_connect} nfs rsize=8192,wsize=8192,timeo=14,intr
+usermod -aG {USER NAME}
 ```

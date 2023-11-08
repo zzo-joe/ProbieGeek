@@ -22,12 +22,12 @@ sudo passwd {USER NAME}
 
 ### Settings should be done in Synology NAS for further connection.  
 * See [How to access files on Synology NAS within the local network (NFS)](https://kb.synology.com/en-ca/DSM/tutorial/How_to_access_files_on_Synology_NAS_within_the_local_network_NFS)
-    > *Go to Control Panel > File Services > NFS (for DSM 7.0 and above)  
-    > *Enable NFS services  
-    > *Go to Control Panel > Shared Folder  
-    > *Select the shared folder that you want to access with your NFS client and click Edit.
-    > *Go to NFS Permissions and click Create.
-    > *Add client (IP address of your server) and save
+    > * Go to Control Panel > File Services > NFS (for DSM 7.0 and above)  
+    > * Enable NFS services  
+    > * Go to Control Panel > Shared Folder  
+    > * Select the shared folder that you want to access with your NFS client and click Edit.
+    > * Go to NFS Permissions and click Create.
+    > * Add client (IP address of your server) and save
 
 
 ### Packages should be installed in your server
@@ -42,6 +42,6 @@ sudo mount {NAS_IP_address}:{Volume_you_want_to_connect} {Location_you_want_to_c
 
 # Add NFS settings using your favorite text editor
 sudo nano /etc/fstab
-
+# Enter below code with variables filled
 {NAS_IP_address}:{Volume_you_want_to_connect} {Location_you_want_to_connect} nfs rsize=8192,wsize=8192,timeo=14,intr
 ```

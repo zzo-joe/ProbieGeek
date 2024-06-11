@@ -54,10 +54,10 @@ $ pwd
 In my case this returns the following results. what do you see on your terminal
 
 ```bash
-/Users/seunghyunkang
+/Users/daeho
 ```
 
-What this is telling me is that I am in a directory named seunghyunkang which is in a directory named User.
+What this is telling me is that I am in a directory named daeho which is in a directory named User.
 
 ## **`cd` – Change Directory**
 
@@ -71,15 +71,15 @@ Now if we type the path of working directory command `pwd` we get the following
 
 ```bash
 $ pwd
-/Users/seunghyunkang/unixTutorial
+/Users/daeho/unixTutorial
 ```
 
-I am now in a directory called unixTutorial which is a subdirectory of seunghyunkang which is a subdirectory of Users.
+I am now in a directory called unixTutorial which is a subdirectory of daeho which is a subdirectory of Users.
 
 To change back to the previous directory we can type in the full path like so.
 
 ```bash
-$ cd /Users/seunghyunkang/
+$ cd /Users/daeho/
 ```
 
 or we can use `..` which refers to the directory above the one you are in and type this.
